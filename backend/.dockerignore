@@ -1,0 +1,14 @@
+venv/
+venv~/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+tests/
+.env
+.env.example
+autonomous_soc.db
+*.db
+*.db-shm
+*.db-wal
+.git/
