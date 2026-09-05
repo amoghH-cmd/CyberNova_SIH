@@ -50,7 +50,7 @@ def get_client():
 def generate_structured(
     prompt: str,
     schema: Type[T],
-    model: str = "gemini-2.0-flash",
+    model: str = "gemini-3.5-flash",
     temperature: float = 0.2,
 ) -> Optional[T]:
     """Call Gemini forcing JSON output matching `schema`. Returns None on any failure."""
@@ -86,7 +86,7 @@ def generate_text(
     if client is None:
         return None
         
-    models_to_try = [model, "gemini-3.5-flash", "gemini-3.1-flash-lite", "gemini-3.6-flash"]
+    models_to_try = [model, "gemini-3.5-flash", "gemini-3.6-flash", "gemini-2.5-flash"]
     # De-duplicate preserving order
     seen = set()
     models_to_try = [m for m in models_to_try if not (m in seen or seen.add(m))]
